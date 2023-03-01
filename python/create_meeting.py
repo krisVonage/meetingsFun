@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from uuid import uuid4
 
 def create_jwt():
-	dotenv_path = ".env"
+	dotenv_path = "../.env"
 	load_dotenv(dotenv_path)
 
 	app_id      = os.environ.get("APP_ID")
