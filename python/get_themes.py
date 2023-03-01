@@ -24,22 +24,18 @@ def create_jwt():
 	payload.setdefault("jti", str(uuid4()))
 
 	token = jwt.encode(payload, secret, algorithm="RS256")
-
 	return(token)
 
 def create_meeting(token):
 	url = "https://api-eu.vonage.com/beta/meetings/themes"
-
 	headers = {
 		'Content-Type': 'application/json',
 		'Authorization': 'Bearer ' + token
 	}
 
 	response = requests.request("GET", url, headers=headers)
-
 	print(response.text)
 	
 
 token = create_jwt()
-
 create_meeting(token)
