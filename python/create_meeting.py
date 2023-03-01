@@ -3,7 +3,6 @@ import json
 import time
 import jwt
 import os
-from flask import Flask, jsonify
 from dotenv import load_dotenv
 from uuid import uuid4
 
@@ -35,7 +34,7 @@ def create_meeting(token):
   		"metadata": "This is a fantastic description of the Meeting",
   		"type": "long_term",
   		"expires_at": "2023-12-31T23:59:59.000Z",
- 		  "recording_options": {
+ 		"recording_options": {
     		"auto_record": False,
     		"record_only_owner": False
   		},
