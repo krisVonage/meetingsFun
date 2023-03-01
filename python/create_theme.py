@@ -24,7 +24,6 @@ def create_jwt():
 	payload.setdefault("jti", str(uuid4()))
 
 	token = jwt.encode(payload, secret, algorithm="RS256")
-
 	return(token)
 
 def create_meeting(token):
@@ -40,10 +39,8 @@ def create_meeting(token):
 	}
 
 	response = requests.request("POST", url, headers=headers, data=payload)
-
 	print(response.text)
 	
 
 token = create_jwt()
-
 create_meeting(token)
