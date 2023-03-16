@@ -4,11 +4,11 @@ Demo code snips for Meetings API
 ## Do this
 clone the repo
 
-update .env file
+update .env file:
 
-change "APP_ID={your_meetings_api_app_id_here}" to reflect the actual App ID
+* change "APP_ID={your_meetings_api_app_id_here}" to reflect the actual App ID
 
-example APP_ID=a1b2c3e4-2a01-3a01-4ab1-a2b3c4e5a3b4
+* example APP_ID=a1b2c3e4-2a01-3a01-4ab1-a2b3c4e5a3b4
 
-update the contents of the meetings-private.key file to that of the private key generated for your Meetings API app
+* update the contents of the meetings-private.key file to that of the private key generated for your Meetings API app
 
